@@ -1,0 +1,23 @@
+server:
+  port: 9005
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka
+  instance:
+    instance-id: order-1     #此实例注册到Eureka服务端的唯一实例ID
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: OrderService       #此实例注册到Eureka服务端的name
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1/retireehealth?useUnicode=true&characterEncoding=utf8
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
